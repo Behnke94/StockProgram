@@ -8,7 +8,7 @@ public class Demo {
     public static void main(String[] args) throws IOException {
 
         final String sym = "GME";
-        //Indtast et URL fra Marketwatch. Virker kun på amerikanske priser
+        //Insert URL from MarketWatch. Do not work with danish stock prices
         URL url = new URL("https://www.marketwatch.com/investing/stock/gme");
 
         URLConnection urlConn = url.openConnection();
