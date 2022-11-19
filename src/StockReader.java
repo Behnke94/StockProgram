@@ -1,17 +1,14 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class ReadMethod {
+public class StockReader {
 
 
+    public static String readStock(String sym) throws IOException {
 
-    public String readStock() throws IOException {
-
-        final String sym = "tsla";
         String readSym = "https://www.marketwatch.com/investing/stock/" + sym;
         URL url = new URL(readSym);
 
@@ -37,4 +34,9 @@ public class ReadMethod {
         }
         return price;
     }
+
+
+
+
 }
+

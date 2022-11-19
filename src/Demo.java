@@ -7,6 +7,7 @@ import java.net.URLConnection;
 public class Demo {
     public static void main(String[] args) throws IOException {
 
+
         //Insert the symbol you want the stock price from. Do not work with danish stock prices
         final String sym = "tsla";
         String readSym = "https://www.marketwatch.com/investing/stock/" + sym;
