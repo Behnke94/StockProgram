@@ -1,16 +1,20 @@
+package StockProgram;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class StockReader {
+public class  Demo {
+    public static void main(String[] args) throws IOException {
 
 
-    public static String readStock(String sym) throws IOException {
-
+        //Insert the symbol you want the stock price from. Do not work with danish stock prices
+        final String sym = "gme";
         String readSym = "https://www.marketwatch.com/investing/stock/" + sym;
         URL url = new URL(readSym);
+
 
         URLConnection urlConn = url.openConnection();
         InputStreamReader inStream = new InputStreamReader(urlConn.getInputStream());
@@ -32,11 +36,6 @@ public class StockReader {
             }
             line = buff.readLine();
         }
-        return price;
+        System.out.println(price);
     }
-
-
-
-
 }
-

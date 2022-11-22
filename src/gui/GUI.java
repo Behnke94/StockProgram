@@ -1,5 +1,6 @@
 package gui;
 
+import StockProgram.StockReader;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -12,6 +13,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class GUI extends Application {
+    private StockReader stockReader;
 
 
     @Override
@@ -51,6 +53,7 @@ public class GUI extends Application {
 
         Button btnGetPrice = new Button("Get Stock Price");
         pane.add(btnGetPrice, 1,4);
+/*        btnGetPrice.setOnAction(event ->  );*/
 
 
 
